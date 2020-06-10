@@ -12,8 +12,8 @@ import Menu from "./components/menu";
 
 export default {
   components: {
-    Menu,
-  },
+    Menu
+  }
 };
 </script>
 

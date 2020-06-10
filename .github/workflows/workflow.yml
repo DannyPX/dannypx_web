@@ -11,8 +11,8 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
 
-      - name: NPM
-        run: |
-          npm install,
-          npm run build,
-          echo Build
+      - name: Installing project dependencies
+      - run: npm install
+      - name: Building the project
+      - run: npm run build
+      - run: echo Build done

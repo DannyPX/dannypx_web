@@ -19,3 +19,11 @@ jobs:
         run: npm run build
       - name: Echo back
         run: echo Build done
+  run:
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+      - name: Test run
+        run: npm start

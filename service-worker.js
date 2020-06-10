@@ -1,4 +1,6 @@
-workbox.core.skipWaiting();
-workbox.core.clientsClaim();
+import { skipWaiting, clientsClaim } from "workbox-core";
+import { precacheAndRoute } from "workbox-precaching";
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
+skipWaiting();
+clientsClaim();
+precacheAndRoute(self.__precacheManifest);

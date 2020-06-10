@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Discord Notification
         env: 
-          DISCORD_WEBHOOK: ${{ secrets.https://discordapp.com/api/webhooks/720382291825786882/2muhPbEAVGwVjwgIuiwzwSsLKfzC5CXysNKRo6GIbIL4hClXQZ6zm3KlKaNa3RgZu8xV }}
+          DISCORD_WEBHOOK: https://discordapp.com/api/webhooks/720382291825786882/2muhPbEAVGwVjwgIuiwzwSsLKfzC5CXysNKRo6GIbIL4hClXQZ6zm3KlKaNa3RgZu8xV
         uses: Ilshidur/action-discord@master
         with:
           args: 'Hello there, im working on my website. This channel is used for updates of my website.'

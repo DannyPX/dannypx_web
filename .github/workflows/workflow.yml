@@ -17,7 +17,7 @@ jobs:
       - name: Building the project
         run: npm run build
       - name: Test run
-        run: npm start
+        run: npm test
       - uses: actions/upload-artifact@v1
         with:
           name: dist

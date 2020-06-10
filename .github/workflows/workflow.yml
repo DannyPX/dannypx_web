@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@master
 
       - name: Installing project dependencies
-      - run: npm install
+        run: npm install
       - name: Building the project
-      - run: npm run build
-      - run: echo Build done
+        run: npm run build
+        run: echo Build done

@@ -13,6 +13,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "onchange": "^7.0.2",
     "popper.js": "^1.16.1",

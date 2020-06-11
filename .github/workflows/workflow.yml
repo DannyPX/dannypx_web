@@ -22,14 +22,3 @@ jobs:
         with:
           name: dist
           path: dist
-  discord-notif:
-    needs: build-linux
-    runs-on: ubuntu-latest
-    steps:
-      - name: Discord Notification
-        env: 
-          DISCORD_WEBHOOK: https://discordapp.com/api/webhooks/720382291825786882/2muhPbEAVGwVjwgIuiwzwSsLKfzC5CXysNKRo6GIbIL4hClXQZ6zm3KlKaNa3RgZu8xV
-          DISCORD_USERNAME: Github
-        uses: Ilshidur/action-discord@master
-        with:
-          args: '{{ EVENT_PAYLOAD.push.pusher.name }} commited to {{ EVENT_PAYLOAD.repository.name }}'

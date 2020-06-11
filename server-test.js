@@ -1,7 +1,7 @@
 const express = require("express");
 const serveStatic = require("serve-static");
 const path = require("path");
-
+const { default: Axios } = require("axios");
 const app = express();
 
 app.use(requireHTTPS);
@@ -17,9 +17,19 @@ app.get(/.*/, function(req, res) {
 const port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log(`app is listening on port: ${port}`);
-  process.exit(0)
+  Axios.post('https://discordapp.com/api/webhooks/720382291825786882/2muhPbEAVGwVjwgIuiwzwSsLKfzC5CXysNKRo6GIbIL4hClXQZ6zm3KlKaNa3RgZu8xV', {
+    content: 'Runner tested',
+    username: 'Github'
+  }, {
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }).then(() => {
+    process.exit(0)
+  }).catch(() => {
+    process.exit(1)
+  })
 });
-
 
 function requireHTTPS(req, res, next) {
   // The 'x-forwarded-proto' check is for Heroku

@@ -36,7 +36,7 @@ app.get(/.*/, function(req, res) {
   res.sendFile(path.join(__dirname, "/dist/index.html"));
 });
 
-app.post('/', function (req, res) {
+app.post('/', function (req) {
   console.log(req.body)
   const webhookClient = new Discord.WebhookClient('720382291825786882', '2muhPbEAVGwVjwgIuiwzwSsLKfzC5CXysNKRo6GIbIL4hClXQZ6zm3KlKaNa3RgZu8xV')
   webhookClient.send({

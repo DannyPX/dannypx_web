@@ -3,12 +3,16 @@ const serveStatic = require("serve-static");
 const path = require("path");
 const app = express();
 const Discord = require('discord.js')
+const isoDate = function() {
+  var d = new Date();
+  return d.toISOString();
+}
 const embed = {
     "description": "Runner completed",
     "title": "dannypx_web/master",
     "url": "https://github.com/DannyPX/dannypx_web",
     "color": 7995533,
-    "timestamp": "2020-06-11T14:28:41.227Z",
+    "timestamp": isoDate,
     "footer": {
       "text": "Commit pushed"
     },

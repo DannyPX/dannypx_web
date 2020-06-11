@@ -47,8 +47,8 @@ app.post("/", function(req, res) {
     avatarURL: "https://i.imgur.com/GfAER9p.png",
     embeds: [embed]
   });
-  res.status(200)
-  res.send('')
+  res.status(200);
+  res.send("");
 });
 
 const port = process.env.PORT || 8080;
